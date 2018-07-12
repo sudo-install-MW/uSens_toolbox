@@ -1,3 +1,6 @@
+# Author : Maheshwaran Umapathy
+# Tested and Debugged on : 11th July 2018 21:23
+
 import sys
 
 sys.path.append("/home/usens/universe/detector/include/models/research")
@@ -50,7 +53,7 @@ def detect_objects(image_np, sess, detection_graph):
         [boxes, scores, classes, num_detections],
         feed_dict={image_tensor: image_np_expanded})
     t2 = cv2.getTickCount()
-    print((t2 - t1) / cv2.getTickFrequency())
+    print("Time consumed for prediction:",(t2 - t1) / cv2.getTickFrequency())
 
     # Visualization of the results of a detection.
     vis_util.visualize_boxes_and_labels_on_image_array(
@@ -60,7 +63,7 @@ def detect_objects(image_np, sess, detection_graph):
         np.squeeze(scores),
         category_index,
         use_normalized_coordinates=True,
-        line_thickness=8)
+        line_thickness=2)
     return image_np
 
 
@@ -68,6 +71,8 @@ if __name__ == '__main__':
     # This is needed since the notebook is stored in the object_detection folder.
 
     video_capture = cv2.VideoCapture(0)
+    video_capture.set(3, 256)
+    video_capture.set(4, 144)
     if not video_capture.isOpened():
         print('No video camera found')
         exit()

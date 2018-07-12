@@ -8,9 +8,10 @@
 import os
 import sys
 import xml.etree.ElementTree as ET
+from datetime import datetime
 
 #get the root working directory
-root_wd = '/home/mahesh/All'
+root_wd = '/media/usens/My Passport/dataset/RGBHT0630/image_aug_0630'
 
 print("\ncurrent working directory is :", root_wd)
 root_files = os.listdir(root_wd)
@@ -29,6 +30,7 @@ img_list = []
 jpg_list = []
 
 # create a dictionary txt_dict for all txt files in the root directory
+start_time = datetime.now()
 for elements in root_files:
     if '.txt' in elements:
         txt_dict[elements[:len(elements) - 4]] = elements
@@ -53,3 +55,4 @@ for all_files in files_updated:
         os.rename( root_wd + "/" + all_files, root_wd + "/img/" + all_files)
     if '.txt' in all_files:
         os.rename( root_wd + "/" + all_files, root_wd + "/txt/" + all_files)
+end_time = datetime.now() - start_time

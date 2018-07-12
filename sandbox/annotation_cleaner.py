@@ -9,14 +9,17 @@ import os
 
 # path = "/home/mahesh/Universe/data_sets/12_gesture_master/img_anno"
 
-path = '/home/mahesh/All'
+path = '/media/usens/My Passport/dataset/RGBHT0630/9_honor'
 
 cur_w_dir = path # enter path if operating on diff directory
 files = os.listdir(cur_w_dir)
 
 # Label class dictionary
-class_dic = {'0': 'body', '1': 'head', '2':'openPalm', '3':'thumbsUp', '4':'beg', '5':'fingerHeart', '6':'okay', '7':'yeah', '8':'gun', '9':'pointUp', '10':'handTogether',
-            '11':'honor', '12':'heart'}
+#class_dic = {'0': 'body', '1': 'head', '2':'openPalm', '3':'thumbsUp', '4':'beg', '5':'fingerHeart', '6':'okay', '7':'yeah', '8':'gun', '9':'pointUp', '10':'handTogether',
+#            '11':'honor', '12':'heart'}
+
+# Label class dictionary
+class_dic = {'0': 'palm', '1': 'thumbup', '2':'beg', '3':'fheart', '4':'okay', '5':'yeah', '6':'gun', '7':'pointup', '8':'hand2gr', '9':'honor', '10':'heart'}
 
 # count dictionary to get total data information
 count_dict = dict()
@@ -36,7 +39,7 @@ for file in files:
                 if lines[0] not in class_dic.keys() or len(lines.split()) > 5:
                     print("the label \"{}\" does not meet the standard in the file \"{}\"".format(lines[:len(lines)-1], file))
                     count_dict['others'] += 1
-                    os.remove(os.path.join(path,file))
+                    #os.remove(os.path.join(path,file))
                     #for elements in lines:
                         #print(elements)
                     continue
