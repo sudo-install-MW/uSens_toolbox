@@ -1,0 +1,6 @@
+Approach  :
+
+Problems  :
+
+Revisions :
+    1. changed the input pipeline as dict cant hold image data system RAM overflow error
