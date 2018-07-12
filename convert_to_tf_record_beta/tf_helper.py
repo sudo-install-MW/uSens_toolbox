@@ -2,14 +2,13 @@ import tensorflow as tf
 import cv2
 from object_detection.utils import dataset_util
 
+
+
 # export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 
 
-label_dict = {'0': 'body', '1': 'head', '2': 'openPalm',
-              '3': 'thumbsUp', '4': 'beg', '5': 'fingerHeart',
-              '6': 'okay', '7': 'year', '8': 'gun',
-              '9': 'pointUp', '10': 'handTogether', '11': 'honor',
-              '12': 'heart'}
+label_dict = {'0': 'palm', '1': 'thumbup', '2': 'beg', '3': 'fheart', '4': 'okay', '5': 'yeah', '6': 'gun',
+                 '7': 'pointup', '8': 'hand2gr', '9': 'honor', '10': 'heart'}
 
 
 def create_tf_example(data_name):
@@ -19,8 +18,8 @@ def create_tf_example(data_name):
     args   : label_and_data_info
     return : tf_label_and_data
     """
-    img_file = '/home/mahesh/Universe/data_sets/12_gesture_master/img_anno/' + data_name + '.jpg'
-    txt_file = '/home/mahesh/Universe/data_sets/12_gesture_master/img_anno/' + data_name + '.txt'
+    img_file = '/media/usens/My Passport/dataset/RGBHT0630/image_aug_0630/img_anno/' + data_name + '.jpg'
+    txt_file = '/media/usens/My Passport/dataset/RGBHT0630/image_aug_0630/img_anno/' + data_name + '.txt'
 
     with tf.gfile.GFile(img_file, 'rb') as fid:
         encoded_image = fid.read()
