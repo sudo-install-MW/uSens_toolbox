@@ -11,7 +11,7 @@ import xml.etree.ElementTree as ET
 from datetime import datetime
 
 #get the root working directory
-root_wd = '/media/usens/My Passport/dataset/RGBHT0630/image_aug_0630'
+root_wd = '/media/usens/My Passport/dataset/RGBHT0630/10_heart'
 
 print("\ncurrent working directory is :", root_wd)
 root_files = os.listdir(root_wd)

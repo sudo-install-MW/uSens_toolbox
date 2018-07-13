@@ -15,7 +15,7 @@ FLAGS = flags.FLAGS
 def main(_):
     writer = tf.python_io.TFRecordWriter(FLAGS.output_path)
     # fill in with directory info if working from different directory
-    cur_w_dir = '/media/usens/My Passport/dataset/RGBHT0630/image_aug_0630/img_anno/'  # ENTER PATH HERE  ## os.getcwd()
+    cur_w_dir = '/media/usens/My Passport/dataset/11_gesture/11_gesture_1080_1920/'  # ENTER PATH HERE  ## os.getcwd()
     cur_w_dir_files = os.listdir(cur_w_dir)
 
     # create empty list to store img and txt file info

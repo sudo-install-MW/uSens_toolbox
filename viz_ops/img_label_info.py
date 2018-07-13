@@ -11,7 +11,7 @@
 import os
 from datetime import datetime
 
-path = '/media/usens/My Passport/dataset/RGBHT0630/image_aug_0630'
+path = '/media/usens/My Passport/dataset/11_gesture/11_gesture_1080_1920'
 cur_w_dir = path
 files = os.listdir(cur_w_dir)
 

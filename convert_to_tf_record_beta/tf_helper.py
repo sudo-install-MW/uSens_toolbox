@@ -18,8 +18,8 @@ def create_tf_example(data_name):
     args   : label_and_data_info
     return : tf_label_and_data
     """
-    img_file = '/media/usens/My Passport/dataset/RGBHT0630/image_aug_0630/img_anno/' + data_name + '.jpg'
-    txt_file = '/media/usens/My Passport/dataset/RGBHT0630/image_aug_0630/img_anno/' + data_name + '.txt'
+    img_file = '/media/usens/My Passport/dataset/11_gesture/11_gesture_1080_1920/' + data_name + '.jpg'
+    txt_file = '/media/usens/My Passport/dataset/11_gesture/11_gesture_1080_1920/' + data_name + '.txt'
 
     with tf.gfile.GFile(img_file, 'rb') as fid:
         encoded_image = fid.read()
@@ -67,7 +67,7 @@ def create_tf_example(data_name):
             ymaxs.append(ymax)
 
             classes_text.append(label_dict[cat].encode())
-            classes.append(int(cat) - 1)
+            classes.append(int(cat) + 1)
     # TODO END
 
     tf_label_and_data = tf.train.Example(features=tf.train.Features(feature={

@@ -120,4 +120,4 @@ class FileOps:
     #             os.rename(root_wd + "/" + all_files, root_wd + "/txt/" + all_files)
 
 a = FileOps()
-a.anno_sanity('/media/usens/My Passport/dataset/RGBHT0630/image_aug_0630/img_anno')
+a.anno_sanity('/media/usens/My Passport/dataset/11_gesture_master/img_anno')

@@ -24,7 +24,8 @@ ROOT = '/home/usens/universe/detector/include/models/research/object_detection/'
 # Download pre-train SSD-MobileNet model from
 # http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v1_coco_2017_11_17.tar.gz
 
-MODEL_ROOT = '/home/usens/universe/detector/include/models/research/object_detection/ssd_lite_mobilenet/saved_model'
+#MODEL_ROOT = '/home/usens/universe/detector/include/models/research/object_detection/ssd_lite_mobilenet/saved_model_test'
+MODEL_ROOT = '/home/usens/universe/detector/include/models/research/object_detection/ssd_lite_mobilenet/saved_model_test'
 MODEL_NAME = 'ssd_mobilenet_v1_coco_2017_11_17'
 PATH_TO_CKPT = os.path.join(MODEL_ROOT, 'frozen_inference_graph.pb')
 
@@ -71,8 +72,8 @@ if __name__ == '__main__':
     # This is needed since the notebook is stored in the object_detection folder.
 
     video_capture = cv2.VideoCapture(0)
-    video_capture.set(3, 256)
-    video_capture.set(4, 144)
+    video_capture.set(3, 512)
+    video_capture.set(4, 288)
     if not video_capture.isOpened():
         print('No video camera found')
         exit()
