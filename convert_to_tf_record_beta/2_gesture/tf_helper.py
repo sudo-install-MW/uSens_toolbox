@@ -64,7 +64,8 @@ def create_tf_example(data_name):
             ymaxs.append(ymax)
 
             classes_text.append(label_dict[cat].encode())
-            classes.append(int(cat) + 1)
+            # open palm has cat 0 and heart has cat 10 so make changes accordingly
+            classes.append(int(cat) + 1 if cat == '0' else int(cat) - 8)
     # TODO END
 
     tf_label_and_data = tf.train.Example(features=tf.train.Features(feature={

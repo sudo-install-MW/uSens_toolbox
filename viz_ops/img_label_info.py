@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from datetime import datetime
 
-path = '/media/usens/My Passport/dataset/RGBHT0630/image_aug_0630/img_anno'
+path = '/media/usens/My Passport/dataset/RGBHT0630/clean_images/palm_heart/'
 
 cur_w_dir = path
 files = os.listdir(cur_w_dir)
@@ -77,31 +77,31 @@ print("Time consumed for reading {} files is {}".format(file_count, time_elapsed
 # Fixing random state for reproducibility
 #np.random.seed(19680801)
 
-plt.rcdefaults()
-fig, ax = plt.subplots()
-
-# Example data
-feed_label = []
-
-for label in class_dic.values():
-    feed_label.append(label)
-
-labels = tuple(feed_label)
-y_pos = np.arange(len(labels))
-
-img_count = []
-for value in count_dict.values():
-    img_count.append(value)
-
-performance = img_count
-
-ax.barh(y_pos, performance, align='center',
-        color='green', ecolor='black')
-ax.set_yticks(y_pos)
-ax.set_yticklabels(labels)
-ax.invert_yaxis()  # labels read top-to-bottom
-ax.set_xlabel('Images')
-ax.set_title('Image distribution')
-
-plt.show()
+# plt.rcdefaults()
+# fig, ax = plt.subplots()
+#
+# # Example data
+# feed_label = []
+#
+# for label in class_dic.values():
+#     feed_label.append(label)
+#
+# labels = tuple(feed_label)
+# y_pos = np.arange(len(labels))
+#
+# img_count = []
+# for value in count_dict.values():
+#     img_count.append(value)
+#
+# performance = img_count
+#
+# ax.barh(y_pos, performance, align='center',
+#         color='green', ecolor='black')
+# ax.set_yticks(y_pos)
+# ax.set_yticklabels(labels)
+# ax.invert_yaxis()  # labels read top-to-bottom
+# ax.set_xlabel('Images')
+# ax.set_title('Image distribution')
+#
+# plt.show()
 # TODO END

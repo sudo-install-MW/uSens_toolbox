@@ -8,7 +8,7 @@ from datetime import datetime
 
 
 flags = tf.app.flags
-flags.DEFINE_string('output_path', '', 'Path to output TFRecord')
+flags.DEFINE_string('output_path', '/media/usens/My Passport/dataset/RGBHT0630/clean_images/palm3707_heart1665.tfrecord', 'Path to output TFRecord')
 FLAGS = flags.FLAGS
 
 
