@@ -1,0 +1,65 @@
+item {
+  id: 1
+  name: 'openPalm'
+  display_name: 'openPalm'
+}
+
+item {
+  id: 2
+  name: 'thumbsUp'
+  display_name: 'thumbsUp'
+}
+
+item {
+  id: 3
+  name: 'beg'
+  display_name: 'beg'
+}
+
+item {
+  id: 4
+  name: 'fingerHeart'
+  display_name: 'fingerHeart'
+}
+
+item {
+  id: 5
+  name: 'okay'
+  display_name: 'okay'
+}
+
+item {
+  id: 6
+  name: 'year'
+  display_name: 'year'
+}
+
+item {
+  id: 7
+  name: 'gun'
+  display_name: 'gun'
+}
+
+item {
+  id: 8
+  name: 'pointUp'
+  display_name: 'pointUp'
+}
+
+item {
+  id: 9
+  name: 'handTogether'
+  display_name: 'handTogether'
+}
+
+item {
+  id: 10
+  name: 'honor'
+  display_name: 'honor'
+}
+
+item {
+  id: 11
+  name: 'heart'
+  display_name: 'heart'
+}

@@ -1,0 +1,2 @@
+label_dict = {'0': 'palm', '1': 'thumbup', '2': 'beg', '3': 'fheart', '4': 'okay', '5': 'yeah', '6': 'gun',
+                 '7': 'pointup', '8': 'hand2gr', '9': 'honor', '10': 'heart'}

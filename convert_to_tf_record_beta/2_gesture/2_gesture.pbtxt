@@ -1,0 +1,10 @@
+item {
+  id: 1
+  name: 'openPalm'
+  display_name: 'openPalm'
+}
+item {
+  id: 2
+  name: 'heart'
+  display_name: 'heart'
+}
