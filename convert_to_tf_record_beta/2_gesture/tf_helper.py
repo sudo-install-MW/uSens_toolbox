@@ -5,7 +5,7 @@ from object_detection.utils import dataset_util
 # export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 
 
-label_dict = {'0': 'palm', '1': 'heart'}
+label_dict = {'0': 'palm', '10': 'heart'}
 
 
 def create_tf_example(data_name):
@@ -66,6 +66,7 @@ def create_tf_example(data_name):
             classes_text.append(label_dict[cat].encode())
             # open palm has cat 0 and heart has cat 10 so make changes accordingly
             classes.append(int(cat) + 1 if cat == '0' else int(cat) - 8)
+            print(classes)
     # TODO END
 
     tf_label_and_data = tf.train.Example(features=tf.train.Features(feature={
