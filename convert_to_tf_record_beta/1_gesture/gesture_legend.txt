@@ -1,0 +1,1 @@
+label_dict = {'0': 'palm', '1': 'heart'}
